@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+	<link rel=stylesheet type=text/css href="{{url_for('static', filename='style.css')}}">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Materialise CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span>ApTest</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="/profile/{{ currentuser }}"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th-list"></span>Topics<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/quiz/Arithmetic_reasoning"><span class="glyphicon glyphicon-menu-right"></span>Arithmetic reasoning</a></li>
+						<li><a href="/quiz/Logical_reasoning"><span class="glyphicon glyphicon-menu-right"></span>Logical reasoning</a></li>
+						<li><a href="/quiz/English"><span class="glyphicon glyphicon-menu-right"></span>English</a></li>
+						<li><a href="/quiz/Technical"><span class="glyphicon glyphicon-menu-right"></span>Technical</a></li>
+					</ul>
+				</li>
+				<li><a href="/user/sign-out"><span class="glyphicon glyphicon-new-window"></span>Log out</a></li>
+			</ul>
+		</div>
+	</nav>
+	{% if currentuser == 'Admin' %}
+	<a href="/admin" class="btn btn-info btn-lg">
+		<span class="glyphicon glyphicon-lock"></span>Master Access
+	</a>
+	{% endif %}
+	<br/>
+	<div class="row">
+
+		<div class="col s12 m6">
+			<div class="card">
+				<div class="card-image">
+					<img src="../static/arithmetic.jpg" alt="Arithmetic_reasoning">
+					<span class="card-title"><b>ARITHMETIC REASONING</b></span>
+					<a class="btn-floating halfway-fab" href="/quiz/Arithmetic_reasoning"><i class="material-icons" style="background-color: black;">add</i></a>
+				</div>
+				<div class="card-content">
+					<p><i>"Brush up your concepts of Arithmetic reasoning!"</i></p>
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="col s12 m6">
+			<div class="card">
+				<div class="card-image">
+					<img src="../static/logical.jpg" alt="Logical_reasoning">
+					<span class="card-title"><b>LOGICAL REASONING</b></span>
+					<a class="btn-floating halfway-fab" href="/quiz/Logical_reasoning"><i class="material-icons" style="background-color: black;">add</i></a>
+				</div>
+				<div class="card-content">
+					<p><i>"Check your logical reasoning skills here!"</i></p>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="col s12 m6">
+			<div class="card">
+				<div class="card-image">
+					<img src="../static/english.jpg" alt="English">
+					<span class="card-title"><b>ENGLISH</b></span>
+					<a class="btn-floating halfway-fab" href="/quiz/English"><i class="material-icons" style="background-color: black;">add</i></a>
+				</div>
+				<div class="card-content">
+					<p><i>"Let's see how good you are in English!"</i></p>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="col s12 m6">
+			<div class="card">
+				<div class="card-image">
+					<img src="../static/technical.jpg" alt="Technical">
+					<span class="card-title"><b>TECHNICAL</b></span>
+					<a class="btn-floating halfway-fab" href="/quiz/Technical"><i class="material-icons" style="background-color: black;">add</i></a>
+				</div>
+				<div class="card-content">
+					<p><i>"Test your technical aptitude!"</i></p>
+					
+				</div>
+			</div>
+		</div>
+
+	</div><br/><br/>
+	<div style="background-color: black;">
+		<p style="text-align: center; color: white;">&copy; 2019 ApTest. All rights reserved.</p>
+	</div><br/>
+</body>
+</html>

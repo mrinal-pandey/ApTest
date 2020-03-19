@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+	<link rel=stylesheet type=text/css href="{{url_for('static', filename='style.css')}}">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	#chart_wrap {
+		position: relative;
+		padding-bottom: 50%;
+		left: -70px;
+		width: 70%;
+		height: 70%;
+	}
+	#piechart {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width:70%;
+		height:70%;
+	}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span>ApTest</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="/profile/{{ currentuser }}"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th-list"></span>Topics<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/quiz/Arithmetic_reasoning"><span class="glyphicon glyphicon-menu-right"></span>Arithmetic reasoning</a></li>
+						<li><a href="/quiz/Logical_reasoning"><span class="glyphicon glyphicon-menu-right"></span>Logical reasoning</a></li>
+						<li><a href="/quiz/English"><span class="glyphicon glyphicon-menu-right"></span>English</a></li>
+						<li><a href="/quiz/Technical"><span class="glyphicon glyphicon-menu-right"></span>Technical</a></li>
+					</ul>
+				</li>
+				<li><a href="/user/sign-out"><span class="glyphicon glyphicon-new-window"></span>Log Out</a></li>
+			</ul>
+		</div>
+	</nav>
+	{% if username == currentuser %}
+	<a class="btn btn-primary" role="button" href="/edit_profile"><span class="glyphicon glyphicon-wrench"></span>Edit Profile</a>
+	{% endif %}
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-12 col-sm-12">
+				<div class="well well-sm">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<img src="./../static/img/{{ ide }}.jpg" alt="Add one" class="img-rounded img-responsive" />
+						</div>
+						<div class="col-sm-6 col-md-8">
+							<h4>{{ username }}</h4>
+							<h4><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;{{ mail }}</h4>
+							<p>
+								<b>Date of Birth: </b>{{ dob }} <br/>
+								<b>Score: </b> {{ score }} <br/>
+								<b>Bio: </b>{{ bio }} <br/>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id = "chart_wrap">
+		<div id="piechart">No participation</div>
+	</div>
+	<div class="jumbotron" style="background-color: black;">
+		<p style="text-align: center; color: white;">&copy; 2019 ApTets. All rights reserved.</p>
+	</div>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+
+			var piedata = google.visualization.arrayToDataTable([
+				['Topics', 'Score'],
+				['Arithmetic_reasoning',     {{ ar|safe }}],
+				['Logical_reasoning',      {{ lr|safe }}],
+				['English',  {{ en|safe }}],
+				['Technical', {{ tech|safe }}]);
+			var options = {
+				title: 'Performance'
+			};
+			if( {{ ar|safe }} + {{ lr|safe }} + {{ en|safe }} + {{ tech|safe }} != 0){
+				var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+				chart.draw(piedata, options);
+			}
+			else{
+				chart = document.getElementById('piechart');
+				chart.innerHTML = "<b>You haven't really done much!</b>"
+			}
+		}
+
+		$(window).on("throttledresize", function (event) {
+			var options = {
+				width: '100%',
+				height: '100%'
+			};
+
+			var data = google.visualization.arrayToDataTable([]);
+			drawChart(data, options);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+.open aptest.db
+
+Topic:
+
+insert into Topic values(101, 'Arithmetic_reasoning');
+insert into Topic values(102, 'Logical_reasoning');
+insert into Topic values(103, 'English');
+insert into Topic values(104, 'Technical');
+
+Questions:
+
+insert into Questions values(1, 'A tailor had a number of shirt pieces to cut from a roll of fabric. He cut each roll of equal length into 10 pieces. He cut at the rate of 45 cuts a minute. How many rolls would be cut in 24 minutes?', '30 rolls', '58 rolls', '120 rolls', '150 rolls', 101);
+
+insert into Questions values(2, 'A monkey climbs 30 feet at the beginning of each hour and rests for a while when he slips back 20 feet before he again starts climbing in the beginning of the next hour. If he begins his ascent at 8.00 a.m., at what will he first touch a flag at 120 feet from the ground?', '4 pm', '5 pm', '6 pm', '8 pm', 101);
+
+insert into Questions values(3, 'A is 3 years older to B and 3 years younger to C, while B and D are twins. How many years older is C and D?', '3', '6', '9', '12', 101);
+
+insert into Questions values(4, 'A girl counted in the following way on the fingers of her left hand : She started by calling the thumb 1, the index finger 2, middle finger 3, ring finger 4, little finger 5 and then reversed direction calling the ring finger 6, middle finger 7 and so on. She counted upto 1994. She ended counting on which finger?', 'Ring finger', 'Middle finger', 'Thumb', 'Index finger', 101);
+
+insert into Questions values(5, 'Between two book ends in your study are displayed your five favourite puzzle books. If you decide to arrange the five books in every possible combination and moved just one book every minute, how long would it take you?', '2 hours', '3 hours', '4 hours', '5 hours', 101);
+
+insert into Questions values(6, 'The 30 members of a club decided to play a badminton singles tournament. Every time a member loses a game he is out of the tournament. There are no ties. What is the minimum number of matches that must be played to determine the winner?', '10', '15', '29', '61', 101);
+
+insert into Questions values(7, 'A man has Rs. 480 in the denominations of one rupee notes, five rupee notes and ten rupee notes. The number of each denomination is equal. What is the total number of notes that he has?', '45', '75', '90', '120', 101);
+
+insert into Questions values(8, 'In a caravan, in addition to 5o hens, there are 45 goats and 8 camels with some keepers. If the total number of feet be 224 more than the number of heads in the caravan, the number of keepers is', '5', '8', '10', '15', 101);
+
+insert into Questions values(9, 'A father is now three times as old as his son. Five years back, he was four times as old as his son. The age of the son(in years) is', '10', '12', '15', '18', 101);
+
+insert into Questions values(10, 'Aruna cut a cake into two halves and cuts one half into smaller pieces of equal size. Each of the small pieces is twenty grams in weight. If she has seven pieces of the cake in all with her, how heavy was the original cake?', '100 grams', '150 grams', '200 grams', '240 grams', 101);
+
+insert into Questions values(11, 'Look at this series: 2, 1, (1/2), (1/4), ... What number should come next?', '1/3', '1/8', '2/8', '1/16', 102);
+
+insert into Questions values(12, 'SCD, TEF, UGH, ____, WKL', 'CMN', 'UJI', 'VIJ', 'IJT', 102);
+
+insert into Questions values(13, 'Which word does NOT belong with the others?', 'parsley', 'basil', 'dill', 'mayonnaise', 102);
+
+insert into Questions values(14, 'Odometer is to mileage as compass is to', 'speed', 'hiking', 'needle', 'direction', 102);
+
+insert into Questions values(15, 'Here are some words translated from an artificial language.
+gorblflur means fan belt
+pixngorbl means ceiling fan
+arthtusl means tile roof
+Which word could mean "ceiling tile"?', 'gorbltusl', 'flurgorbl', 'arthflur', 'pixnarth', 102);
+
+insert into Questions values(16, 'Applying for Seasonal Employment occurs when a person requests to be considered for a job that is dependent on a particular season or time of year. Which situation below is the best example of Applying for Seasonal Employment?', 'The ski instructors at Top of the Peak Ski School work from December through March.', 'Matthew prefers jobs that allow him to work outdoors.', 'Lucinda makes an appointment with the beach resort restaurant manager to interview for the summer waitressing position that was advertised in the newspaper.', 'Dougs ice cream shop stays open until 11 p.m. during the summer months.', 102);
+
+insert into Questions values(17, 'Eileen is planning a special birthday dinner for her husbands 35th birthday. She wants the evening to be memorable, but her husband is a simple man who would rather be in jeans at a baseball game than in a suit at a fancy restaurant. Which restaurant below should Eileen choose?', 'Alfredos offers fine Italian cuisine and an elegant Tuscan decor. Patrons will feel as though theyve spent the evening in a luxurious Italian villa.', 'Panchos Mexican Buffet is an all-you-can-eat family style smorgasbord with the best tacos in town.', 'The Parisian Bistro is a four-star French restaurant where guests are treated like royalty. Chef Dilbert Olay is famous for his beef bourguignon.', 'Martys serves delicious, hearty meals in a charming setting reminiscent of a baseball clubhouse in honor of the owner,Marty Lester, a former major league baseball all-star.', 102);
+
+insert into Questions values(18, 'Vincent has a paper route. Each morning, he delivers 37 newspapers to customers in his neighborhood. It takes Vincent 50 minutes to deliver all the papers. If Vincent is sick or has other plans, his friend Thomas, who lives on the same street, will sometimes deliver the papers for him.', 'Vincent and Thomas live in the same neighborhood.', 'It takes Thomas more than 50 minutes to deliver the papers.', 'It is dark outside when Vincent begins his deliveries.', 'Thomas would like to have his own paper route.', 102);
+
+insert into Questions values(19, 'CMM, EOO, GQQ, _____, KUU', 'GRR', 'GSS', 'ISS', 'ITT', 102);
+
+insert into Questions values(20, 'Look at this series: 22, 21, 23, 22, 24, 23, ... What number should come next?', '22', '24', '25', '26', 102);
+
+insert into Questions values(21, 'Choose the word which best expresses the meaning of the word "CORPULENT"', 'Lean', 'Gaunt', 'Emaciated', 'Obese', 103);
+
+insert into Questions values(22, 'Choose the word which is the exact OPPOSITE of the word "ENORMOUS"', 'Soft', 'Average', 'Tiny', 'Weak', 103);
+
+insert into Questions values(23, 'Fate smiles ...... those who untiringly grapple with stark realities of life.', 'with', 'over', 'on', 'round', 103);
+
+insert into Questions values(24, 'Find the correctly spelt word.', 'Efficient', 'Treatmeant', 'Beterment', 'Employd', 103);
+
+insert into Questions values(25, 'Choose the word which best expresses the meaning of the word "BRIEF"', 'Limited', 'Small', 'Little', 'Short', 103);
+
+insert into Questions values(26, 'Choose the word which is the exact OPPOSITE of the word "COMMISSIONED"', 'Started', 'Closed', 'Finished', 'Terminated', 103);
+
+insert into Questions values(27, 'The miser gazed ...... at the pile of gold coins in front of him.', 'avidly', 'admiringly', 'thoughtfully', 'earnestly', 103);
+
+insert into Questions values(28, 'Find the correctly spelt word.', 'Foreign', 'Foreine', 'Fariegn', 'Forein', 103);
+
+insert into Questions values(29, 'When he
+P : 	did not know
+Q : 	he was nervous and
+R : 	heard the hue and cry at midnight
+S : 	what to do
+The Proper sequence should be:', 'RQPS', 'QSPR', 'SQPR', 'PQRS', 103);
+
+insert into Questions values(30, 'It has been established that
+P : 	Einstein was
+Q : 	although a great scientist
+R : 	weak in arithmetic
+S : 	right from his school days
+The Proper sequence should be:', 'SRPQ', 'QPRS', 'QPSR', 'RQPS', 103);
+
+insert into Questions values(31, 'The complexity of searching an element from a set of n elements using Binary search algorithm is', 'O(n)', 'O(log n)', 'O(n^2)', 'O(nlogn)', 104);
+
+insert into Questions values(32, 'Two main measures for the efficiency of an algorithm are', 'Time and space', 'Processor and memory', 'Complexity and capacity', 'Data and space', 104);
+
+insert into Questions values(33, 'If the array is already sorted, then the running time for merge sort is:', 'O(1)', 'O(nlogn)', 'O(n)', 'O(n^2)', 104);
+
+insert into Questions values(34, 'Which is the best data structure for round robin algorithm for CPU scheduling?', 'Stack implemented using queues', 'Doubly linked list', 'Circular queue', 'Queue implemented using stacks', 104);
+
+insert into Questions values(35, 'Which algorithm is having highest space complexity?', 'Bubble sort', 'Insertion sort', 'Quick sort', 'Merge sort', 104);
+
+insert into Questions values(36, 'Algorithms A and B solve the same problem. Time complexity of A is in O(n^2) and that of B is in O(n). Which among the following can you guarantee?', 'A is having less executable instructions than B', 'A is having more number of functions than B', 'A is having less number of functions than B', 'A is having more executable instructions than B', 104);
+
+insert into Questions values(37, 'The complexity of merge sort algorithm is', 'O(n)', 'O(log n)', 'O(n^2)', 'O(nlogn)', 104);
+
+insert into Questions values(38, 'The complexity of linear search algorithm is', 'O(n)', 'O(log n)', 'O(n^2)', 'O(nlogn)', 104);
+
+insert into Questions values(39, 'The OS of a computer may periodically collect all the free memory space to form contiguous block of free space. This is called', 'Concatenation', 'Garbage collection', 'Collision', 'Dynamic Memory Allocation', 104);
+
+insert into Questions values(40, 'A mathematical-model with a collection of operations defined on that model is called', 'Data Structure', 'Abstract Data Type', 'Primitive Data Type', 'Algorithm', 104);
+
+Answers:
+
+insert into Answers values(1, 3);
+insert into Answers values(2, 3);
+insert into Answers values(3, 2);
+insert into Answers values(4, 4);
+insert into Answers values(5, 1);
+insert into Answers values(6, 3);
+insert into Answers values(7, 3);
+insert into Answers values(8, 4);
+insert into Answers values(9, 3);
+insert into Answers values(10, 4);
+insert into Answers values(11, 2);
+insert into Answers values(12, 3);
+insert into Answers values(13, 4);
+insert into Answers values(14, 4);
+insert into Answers values(15, 4);
+insert into Answers values(16, 3);
+insert into Answers values(17, 4);
+insert into Answers values(18, 1);
+insert into Answers values(19, 3);
+insert into Answers values(20, 3);
+insert into Answers values(21, 4);
+insert into Answers values(22, 3);
+insert into Answers values(23, 3);
+insert into Answers values(24, 1);
+insert into Answers values(25, 4);
+insert into Answers values(26, 4);
+insert into Answers values(27, 1);
+insert into Answers values(28, 1);
+insert into Answers values(29, 1);
+insert into Answers values(30, 2);
+insert into Answers values(31, 2);
+insert into Answers values(32, 1);
+insert into Answers values(33, 2);
+insert into Answers values(34, 3);
+insert into Answers values(35, 4);
+insert into Answers values(36, 4);
+insert into Answers values(37, 4);
+insert into Answers values(38, 1);
+insert into Answers values(39, 2);
+insert into Answers values(40, 2);
+
+Tables:
+
+create table Topic(
+	Topic_id int,
+	Topic_name varchar(100)
+);
+
+create table Questions(
+	Q_id int,
+	Question_name varchar(10000),
+	option1 varchar(1000),
+	option2 varchar(1000),
+	option3 varchar(1000),
+	option4 varchar(1000),
+	Topic_id int
+);
+
+create table Answers(
+	Q_id int,
+	answer_option int(1)
+);
+
+create table Score(
+	username varchar(50),
+	arithmetic_reasoning_score INTEGER DEFAULT 0,
+	logical_reasoning_score INTEGER DEFAULT 0,
+	english_score INTEGER DEFAULT 0,
+	technical_score INTEGER DEFAULT 0,
+	PRIMARY KEY(username)
+);
+
+create table User(
+	id INTEGER NOT NULL, 
+	username VARCHAR(50) NOT NULL, 
+	password VARCHAR(255) DEFAULT '' NOT NULL, 
+	active BOOLEAN DEFAULT '0', 
+	email VARCHAR(255) NOT NULL, 
+	bio VARCHAR(500) DEFAULT "", 
+	dob VARCHAR(11) DEFAULT '-----------', 
+	role BOOLEAN, 
+	PRIMARY KEY(id), 
+	UNIQUE (username), 
+	CHECK(active IN(0, 1)), 
+	UNIQUE(email), 
+	CHECK(role IN(0, 1))
+); 
+
+create table states(
+	id INTEGER NOT NULL, 
+	username VARCHAR(50) NOT NULL, 
+	category VARCHAR(50) DEFAULT 'tech' NOT NULL, 
+	Topic_name VARCHAR(50) DEFAULT 'Arrays' NOT NULL, 
+	mainflag BOOLEAN DEFAULT '0' NOT NULL, 
+	partialscore VARCHAR(10) DEFAULT '0' NOT NULL, 
+	numofinc INTEGER NOT NULL, 
+	fifty50 BOOLEAN DEFAULT '0' NOT NULL, 
+	onecorrect BOOLEAN DEFAULT '0' NOT NULL, 
+	q50 INTEGER NOT NULL, 
+	"Q0A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q0A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q0A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q0A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q1A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q1A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q1A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q1A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q2A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q2A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q2A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q2A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q3A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q3A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q3A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q3A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q4A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q4A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q4A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q4A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q4" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q5A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q5A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q5A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q5A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q5" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q6A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q6A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q6A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q6A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q6" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q7A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q7A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q7A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q7A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q7" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q8A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q8A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q8A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q8A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q8" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q9A0" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q9A1" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q9A2" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q9A3" BOOLEAN DEFAULT '0' NOT NULL, 
+	"Q9" BOOLEAN DEFAULT '0' NOT NULL, 
+	PRIMARY KEY (id), 
+	UNIQUE (username), 
+	CHECK (mainflag IN (0, 1)), 
+	CHECK (fifty50 IN (0, 1)), 
+	CHECK (onecorrect IN (0, 1)), 
+	CHECK ("Q0A0" IN (0, 1)), 
+	CHECK ("Q0A1" IN (0, 1)), 
+	CHECK ("Q0A2" IN (0, 1)), 
+	CHECK ("Q0A3" IN (0, 1)), 
+	CHECK ("Q0" IN (0, 1)), 
+	CHECK ("Q1A0" IN (0, 1)), 
+	CHECK ("Q1A1" IN (0, 1)), 
+	CHECK ("Q1A2" IN (0, 1)), 
+	CHECK ("Q1A3" IN (0, 1)), 
+	CHECK ("Q1" IN (0, 1)), 
+	CHECK ("Q2A0" IN (0, 1)), 
+	CHECK ("Q2A1" IN (0, 1)), 
+	CHECK ("Q2A2" IN (0, 1)), 
+	CHECK ("Q2A3" IN (0, 1)), 
+	CHECK ("Q2" IN (0, 1)), 
+	CHECK ("Q3A0" IN (0, 1)), 
+	CHECK ("Q3A1" IN (0, 1)), 
+	CHECK ("Q3A2" IN (0, 1)), 
+	CHECK ("Q3A3" IN (0, 1)), 
+	CHECK ("Q3" IN (0, 1)), 
+	CHECK ("Q4A0" IN (0, 1)), 
+	CHECK ("Q4A1" IN (0, 1)), 
+	CHECK ("Q4A2" IN (0, 1)), 
+	CHECK ("Q4A3" IN (0, 1)), 
+	CHECK ("Q4" IN (0, 1)), 
+	CHECK ("Q5A0" IN (0, 1)), 
+	CHECK ("Q5A1" IN (0, 1)), 
+	CHECK ("Q5A2" IN (0, 1)), 
+	CHECK ("Q5A3" IN (0, 1)), 
+	CHECK ("Q5" IN (0, 1)), 
+	CHECK ("Q6A0" IN (0, 1)), 
+	CHECK ("Q6A1" IN (0, 1)), 
+	CHECK ("Q6A2" IN (0, 1)), 
+	CHECK ("Q6A3" IN (0, 1)), 
+	CHECK ("Q6" IN (0, 1)), 
+	CHECK ("Q7A0" IN (0, 1)), 
+	CHECK ("Q7A1" IN (0, 1)), 
+	CHECK ("Q7A2" IN (0, 1)), 
+	CHECK ("Q7A3" IN (0, 1)), 
+	CHECK ("Q7" IN (0, 1)), 
+	CHECK ("Q8A0" IN (0, 1)), 
+	CHECK ("Q8A1" IN (0, 1)), 
+	CHECK ("Q8A2" IN (0, 1)), 
+	CHECK ("Q8A3" IN (0, 1)), 
+	CHECK ("Q8" IN (0, 1)), 
+	CHECK ("Q9A0" IN (0, 1)), 
+	CHECK ("Q9A1" IN (0, 1)), 
+	CHECK ("Q9A2" IN (0, 1)), 
+	CHECK ("Q9A3" IN (0, 1)), 
+	CHECK ("Q9" IN (0, 1))
+);
+
+SmartDraw - ER
+LucidChart - Schema
